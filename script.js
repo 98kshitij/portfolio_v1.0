@@ -7,7 +7,9 @@ const commands = {
     about: 'Hi, I\'m Kshitij, a Software Developer with experience in HTML, CSS, JavaScript, Java and Python.',
     skills: 'Skills: HTML, CSS, JavaScript, Java, Spring, SpringBoot, and AWS',
     projects: 'Projects:\n1. Portfolio Website',
-    contact: 'You can reach me via email at kmr.kshitij@gmail.com or follow me on LinkedIn: https://www.linkedin.com/in/98kshitij',
+    contact: 'You can reach me via email at kmr.kshitij@gmail.com',
+    linkedin: 'Opening LinkedIn profile: https://www.linkedin.com/in/98kshitij',
+    github: 'Opening GitHub profile: https://github.com/98kshitij',
     clear: ''
 };
 
@@ -37,3 +39,19 @@ commandInput.addEventListener('keydown', function(event) {
         commandInput.value = '';
     }
 });
+
+function typeEffect(text, element) {
+    let index = 0;
+    function type() {
+        if (index < text.length) {
+            element.innerHTML += text[index];
+            index++;
+            setTimeout(type, 50); // Adjust speed here
+        }
+    }
+    type();
+}
+
+// Example usage in the command handler
+typeEffect(commands[input], terminalContent);
+
