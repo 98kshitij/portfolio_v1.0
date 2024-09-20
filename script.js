@@ -17,7 +17,7 @@ commandInput.addEventListener('keydown', function(event) {
         const input = commandInput.value.trim().toLowerCase();
         
         // Create a new line with the typed command
-        terminalContent.innerHTML += `<div><span class="prompt">[kshitij@portfolio]$</span> ${input}</div>`;
+        terminalContent.innerHTML += `<div><span class="prompt">[portfolio@kshitij]$</span> ${input}</div>`;
 
         // Check if the command exists and display the result
         if (commands[input]) {
