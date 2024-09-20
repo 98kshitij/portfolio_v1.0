@@ -1,7 +1,7 @@
 const terminalContent = document.getElementById('terminal-content');
 const commandInput = document.getElementById('command-input');
 
-// Define the commands for the terminal
+// Terminal commands
 const commands = {
     help: 'Available commands: about, skills, projects, contact, linkedin, github, email, clear',
     about: 'Hi, I\'m Kshitij, a passionate software developer with experience in HTML, CSS, JavaScript, Java and Python.',
@@ -15,14 +15,14 @@ const commands = {
     clear: ''
 };
 
-// Typing animation for terminal output
+// Typing effect function
 function typeEffect(text, element, callback) {
     let index = 0;
     function type() {
         if (index < text.length) {
             element.innerHTML += text[index];
             index++;
-            setTimeout(type, 50); // Speed of typing
+            setTimeout(type, 50);
         } else if (callback) {
             callback();
         }
@@ -30,16 +30,15 @@ function typeEffect(text, element, callback) {
     type();
 }
 
-// Function to handle commands
+// Command handler
 function handleCommand(input) {
     const outputElement = document.createElement('div');
     const promptElement = document.createElement('span');
     promptElement.classList.add('prompt');
-    promptElement.innerHTML = '[portfolio@kshitij]$ ';
+    promptElement.innerHTML = '[kshitij@ubuntu:~]$ ';
     outputElement.appendChild(promptElement);
-
-    // Display the typed command
-    outputElement.innerHTML += `${input}`;
+    
+    outputElement.innerHTML += input;
     terminalContent.appendChild(outputElement);
 
     const responseElement = document.createElement('div');
@@ -49,31 +48,25 @@ function handleCommand(input) {
             terminalContent.innerHTML = ''; // Clear the terminal content
         } else {
             typeEffect(commands[input], responseElement, () => {
-                if (input === 'linkedin') {
-                    window.open('https://www.linkedin.com/in/98kshitij', '_blank');
-                } else if (input === 'github') {
-                    window.open('https://github.com/98kshitij', '_blank');
-                } else if (input === 'email') {
-                    window.open('mailto:kmr.kshitij@gmail.com');
-                }
+                // Open external links
+                if (input === 'linkedin') window.open('https://www.linkedin.com/in/98kshitij', '_blank');
+                if (input === 'github') window.open('https://github.com/98kshitij', '_blank');
+                if (input === 'email') window.open('mailto:kmr.kshitij@gmail.com');
             });
         }
     } else {
         typeEffect(`Command not found: ${input}`, responseElement);
     }
 
-    // Append the response
     terminalContent.appendChild(responseElement);
-
-    // Scroll to the bottom after output
     terminalContent.scrollTop = terminalContent.scrollHeight;
 }
 
-// Event listener for the command input
+// Event listener for input
 commandInput.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         const input = commandInput.value.trim().toLowerCase();
         handleCommand(input);
-        commandInput.value = ''; // Clear the input field after each command
+        commandInput.value = ''; // Clear input
     }
 });
