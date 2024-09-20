@@ -39,19 +39,3 @@ commandInput.addEventListener('keydown', function(event) {
         commandInput.value = '';
     }
 });
-
-function typeEffect(text, element) {
-    let index = 0;
-    function type() {
-        if (index < text.length) {
-            element.innerHTML += text[index];
-            index++;
-            setTimeout(type, 50); // Adjust speed here
-        }
-    }
-    type();
-}
-
-// Example usage in the command handler
-typeEffect(commands[input], terminalContent);
-
