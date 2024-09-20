@@ -3,15 +3,14 @@ const commandInput = document.getElementById('command-input');
 
 // Terminal commands
 const commands = {
-    help: 'Available commands: about, skills, projects, contact, linkedin, github, email, clear',
-    about: 'Hi, I\'m Kshitij, a passionate web developer with experience in HTML, CSS, and JavaScript.',
-    skills: 'Skills: HTML, CSS, JavaScript, React, Node.js',
+    help: 'Available commands: about, skills, projects, contact, linkedin, github, clear',
+    about: 'Hi, I\'m Kshitij, a passionate software developer with experience in HTML, CSS, JavaScript, Java, and Python',
+    skills: 'Skills: HTML, CSS, JavaScript, Java, Spring, SpringBoot, and AWS',
     projects: `
 1. Portfolio Website - A personal portfolio to showcase my projects.`,
-    contact: 'You can reach me via email or check out my profiles on LinkedIn and GitHub.',
+    contact: 'You can reach me via kmr.kshitij@gmail.com or check out my profiles on LinkedIn and GitHub.',
     linkedin: 'LinkedIn profile: https://www.linkedin.com/in/98kshitij',
     github: 'GitHub profile: https://github.com/98kshitij',
-    email: 'Email: kmr.kshitij@gmail.com',
     clear: ''
 };
 
