@@ -8,8 +8,6 @@ const commands = {
     skills: 'Skills: HTML, CSS, JavaScript, Java, Spring, SpringBoot, and AWS',
     projects: 'Projects:\n1. Portfolio Website',
     contact: 'You can reach me via email at kmr.kshitij@gmail.com',
-    linkedin: 'Opening LinkedIn profile: https://www.linkedin.com/in/98kshitij',
-    github: 'Opening GitHub profile: https://github.com/98kshitij',
     clear: ''
 };
 
