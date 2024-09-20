@@ -4,10 +4,10 @@ const commandInput = document.getElementById('command-input');
 // Fake terminal commands
 const commands = {
     help: 'Available commands: about, skills, projects, contact, clear',
-    about: 'Hi, I\'m Kshitij, a passionate web developer with experience in HTML, CSS, and JavaScript.',
-    skills: 'Skills: HTML, CSS, JavaScript, React, Node.js',
-    projects: 'Projects:\n1. Portfolio Website\n2. E-commerce Application\n3. To-Do List',
-    contact: 'You can reach me via email at kshitijinfo@example.com or follow me on LinkedIn: https://linkedin.com/in/kshitij',
+    about: 'Hi, I\'m Kshitij, a Software Developer with experience in HTML, CSS, JavaScript, Java and Python.',
+    skills: 'Skills: HTML, CSS, JavaScript, Java, Spring, SpringBoot, and AWS',
+    projects: 'Projects:\n1. Portfolio Website',
+    contact: 'You can reach me via email at kmr.kshitij@gmail.com or follow me on LinkedIn: https://www.linkedin.com/in/98kshitij',
     clear: ''
 };
 
